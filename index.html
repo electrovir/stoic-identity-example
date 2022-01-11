@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stoic Identity Example</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="/global-shims.js"></script>
+        <style>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                text-align: center;
+
+                background-color: white;
+
+                font-size: 2rem;
+                font-family: sans-serif;
+            }
+
+            /* hide the stoic identity connection iframe */
+            iframe {
+                display: none;
+            }
+
+            button {
+                background-color: white;
+                border: 3px solid dodgerblue;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                font: inherit;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgb(233, 233, 233);
+            }
+
+            button:active {
+                background-color: rgb(196, 196, 196);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="loading">Loading...</div>
+        <div id="principal" hidden></div>
+        <button id="connect" hidden>Connect to Stoic Identity</button>
+        <button id="logout" hidden>Log out of Stoic Identity</button>
+
+        <!-- load this at the bottom so the DOM is populated first -->
+        <script type="module" src="/src/index.ts"></script>
+    </body>
+</html>

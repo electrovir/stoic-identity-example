@@ -1,0 +1,31 @@
+{
+    "name": "stoic-identity-example",
+    "private": true,
+    "homepage": "https://github.com/electrovir/stoic-identity-example#readme",
+    "bugs": {
+        "url": "https://github.com/electrovir/stoic-identity-example/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electrovir/stoic-identity-example.git"
+    },
+    "author": {
+        "name": "electrovir",
+        "url": "https://github.com/electrovir"
+    },
+    "scripts": {
+        "format": "virmator format write",
+        "spellcheck": "virmator spellcheck",
+        "start": "npm install && vite --force --config ./vite/config.ts",
+        "test:full": "npm run spellcheck && virmator format check"
+    },
+    "dependencies": {
+        "@dfinity/agent": "^0.10.2",
+        "ic-stoic-identity": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.8",
+        "virmator": "^1.3.7",
+        "vite": "^2.7.10"
+    }
+}

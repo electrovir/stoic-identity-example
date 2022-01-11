@@ -1,0 +1,4 @@
+{
+    "import": ".cspell-base.json",
+    "words": ["vite", "globbing", "dfinity"]
+}
