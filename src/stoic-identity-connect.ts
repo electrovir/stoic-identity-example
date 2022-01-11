@@ -23,3 +23,7 @@ export async function loadStoredStoicIdentity(): Promise<StoicIdentity | undefin
         return undefined;
     }
 }
+
+export async function disconnectFromStoicIdentity(): Promise<void> {
+    return StoicIdentity.disconnect();
+}

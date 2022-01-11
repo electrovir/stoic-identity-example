@@ -1,4 +1,8 @@
-import {createNewStoicIdentityConnection, loadStoredStoicIdentity} from './stoic-identity-connect';
+import {
+    createNewStoicIdentityConnection,
+    disconnectFromStoicIdentity,
+    loadStoredStoicIdentity,
+} from './stoic-identity-connect';
 import {StoicIdentity} from './stoic-identity-types-shim';
 
 type Elements = Record<
@@ -35,7 +39,7 @@ function showAuth(stoicIdentity: StoicIdentity, elements: Elements) {
 }
 
 async function logout({principalDiv, connectButton, logoutButton}: Elements) {
-    await StoicIdentity.disconnect();
+    await disconnectFromStoicIdentity();
     principalDiv.setAttribute('hidden', '');
     logoutButton.setAttribute('hidden', '');
     connectButton.removeAttribute('hidden');

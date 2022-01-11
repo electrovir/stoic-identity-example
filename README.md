@@ -2,6 +2,8 @@
 
 Example of how to use Stoic Identity.
 
+Very minimal, not using any component framework, just raw JavaScript (well, TypeScript) DOM interactions.
+
 # Usage
 
 1. Clone this repository.
@@ -24,3 +26,5 @@ Example of how to use Stoic Identity.
 7. Now you should see the following on this app (with your principal instead):
 
     ![connected view](./readme-pictures/connected.png)
+
+8. See `makeTransfer` in [./src/ledger.ts](./src/ledger.ts) for making actual ICP transfers from Stoic Wallets.
